@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="../../css/main.css" />
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Sludinajumu portals</a>
+        </div>
+        <div id="navbar" class="collapesenavbar-collapse">
+            <ul class="nac navbar-nav">
+                <li class="active"><a href="#">Home</a> </li>
+                <li><a href="#about"> About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="starter-template">
+        <h1>Sludinajumu portals</h1>
+        <form action="#" th:action="@{/advertisement}"
+              th:object="${advertisement}" method="post">
+            <p>Name: <input type="text" th:field="*{name}" /> </p>
+            <p>Surename: <input type="text" th:field="*{surename}" /> </p>
+            <p>Type: <input type="text" th:field="*{type}" /> </p>
+            <p><input type="submit" value="Submit">
+                <input type="reset" value="Reset"></p>
+        </form>
+
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
